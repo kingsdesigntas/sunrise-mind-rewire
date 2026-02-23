@@ -1,14 +1,24 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/HeroSection";
+import ThetaStateSection from "@/components/ThetaStateSection";
+import NeuroplasticitySection from "@/components/NeuroplasticitySection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import AffirmationCategoriesSection from "@/components/AffirmationCategoriesSection";
+import EarlyAccessSection from "@/components/EarlyAccessSection";
 
-const Index = () => {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
-  );
-};
+const Index = () => (
+  <main className="overflow-hidden">
+    <HeroSection />
+    <ThetaStateSection />
+    <NeuroplasticitySection />
+    <HowItWorksSection />
+    <AffirmationCategoriesSection />
+    <EarlyAccessSection />
+    <footer className="bg-deep-blue py-6 text-center">
+      <p className="text-primary-foreground/40 text-sm">
+        © 2026 Theta Clock. All rights reserved.
+      </p>
+    </footer>
+  </main>
+);
 
 export default Index;
