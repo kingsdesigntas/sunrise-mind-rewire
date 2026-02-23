@@ -11,7 +11,7 @@ const steps = [
 
 const HowItWorksSection = () =>
 <section className="relative gradient-blue">
-    <div className="pt-16 md:pt-24 pb-8">
+    <div className="pt-16 md:pt-24 pb-8 py-[9px]">
       <div className="container mx-auto px-6">
         <AnimatedSection>
           <h2 className="text-3xl md:text-5xl text-primary-foreground text-center mb-4">
