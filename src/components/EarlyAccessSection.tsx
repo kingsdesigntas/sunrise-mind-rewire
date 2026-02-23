@@ -21,46 +21,80 @@ const EarlyAccessSection = () => {
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
       }} />
 
-      <div className="container mx-auto px-6 text-center relative z-10">
+      <div className="container mx-auto px-6 relative z-10">
         <AnimatedSection>
-          <h2 className="text-3xl md:text-5xl text-primary-foreground mb-4">
-            Wake Up to a New Mindset.
+          <h2 className="text-3xl md:text-5xl text-primary-foreground mb-4 text-center">
+            Early Beta Pricing
           </h2>
-          <p className="text-primary-foreground/70 max-w-lg mx-auto mb-10 text-lg">
-            Join the waitlist and be the first to experience Theta Clock on Android.
+          <p className="text-primary-foreground/70 max-w-lg mx-auto mb-12 text-lg text-center">
+            Get lifetime early access — completely free during our beta launch.
           </p>
         </AnimatedSection>
 
-        <AnimatedSection delay={0.15}>
-          {submitted ? (
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              className="bg-primary-foreground/10 rounded-2xl p-8 max-w-md mx-auto border border-primary-foreground/20"
-            >
-              <p className="text-primary-foreground text-xl font-semibold mb-2">You're on the list! 🌅</p>
-              <p className="text-primary-foreground/70">We'll let you know when Theta Clock is ready.</p>
-            </motion.div>
-          ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                required
-                className="flex-1 px-6 py-4 rounded-full bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-golden-yellow/50 text-base"
-              />
-              <motion.button
-                type="submit"
-                whileHover={{ y: -2, boxShadow: "0 8px 24px hsl(47 100% 50% / 0.3)" }}
-                transition={{ duration: 0.25 }}
-                className="px-8 py-4 rounded-full bg-golden-yellow text-foreground font-medium text-lg tracking-wide hover:brightness-110 transition-all"
+        {/* Pricing Cards */}
+        <AnimatedSection delay={0.1}>
+          <div className="flex flex-col sm:flex-row gap-6 max-w-2xl mx-auto mb-14">
+            {/* Regular Price Card */}
+            <div className="flex-1 rounded-2xl border border-primary-foreground/15 bg-primary-foreground/5 p-8 text-center opacity-60">
+              <p className="text-primary-foreground/60 text-sm font-medium uppercase tracking-wider mb-4">Regular Price</p>
+              <div className="relative inline-block mb-4">
+                <span className="text-5xl font-extrabold text-primary-foreground/40">$8.99</span>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-full h-[3px] bg-brand-pink/80 rotate-[-12deg]" />
+                </div>
+              </div>
+              <p className="text-primary-foreground/40 text-sm">per month</p>
+            </div>
+
+            {/* Beta Free Card */}
+            <div className="flex-1 rounded-2xl border-2 border-golden-yellow/60 bg-primary-foreground/10 p-8 text-center relative overflow-hidden">
+              <div className="absolute top-3 right-3 bg-golden-yellow text-foreground text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                Beta
+              </div>
+              <p className="text-golden-yellow text-sm font-medium uppercase tracking-wider mb-4">Early Access</p>
+              <span className="text-5xl font-extrabold text-primary-foreground">FREE</span>
+              <p className="text-primary-foreground/60 text-sm mt-4">No credit card required</p>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* Email Capture */}
+        <AnimatedSection delay={0.2}>
+          <div className="max-w-md mx-auto text-center">
+            <p className="text-primary-foreground/80 mb-6 text-base">
+              Enter your email to receive your free download link.
+            </p>
+
+            {submitted ? (
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                className="bg-primary-foreground/10 rounded-2xl p-8 border border-primary-foreground/20"
               >
-                Join Waitlist
-              </motion.button>
-            </form>
-          )}
+                <p className="text-primary-foreground text-xl font-semibold mb-2">You're in! 🌅</p>
+                <p className="text-primary-foreground/70">Check your inbox for your free download link.</p>
+              </motion.div>
+            ) : (
+              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                  className="flex-1 px-6 py-4 rounded-full bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-golden-yellow/50 text-base"
+                />
+                <motion.button
+                  type="submit"
+                  whileHover={{ y: -2, boxShadow: "0 8px 24px hsl(47 100% 50% / 0.3)" }}
+                  transition={{ duration: 0.25 }}
+                  className="px-8 py-4 rounded-full bg-golden-yellow text-foreground font-medium text-lg tracking-wide hover:brightness-110 transition-all"
+                >
+                  Get Free Access
+                </motion.button>
+              </form>
+            )}
+          </div>
         </AnimatedSection>
 
         <AnimatedSection delay={0.3}>
