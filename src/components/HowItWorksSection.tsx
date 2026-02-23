@@ -3,14 +3,14 @@ import AnimatedSection from "./AnimatedSection";
 import WaveDivider from "./WaveDivider";
 
 const steps = [
-  { icon: Moon, title: "Set Your Alarm", desc: "Choose your wake time like any alarm clock." },
-  { icon: Volume2, title: "Pick Affirmations", desc: "Select from categories or create your own." },
-  { icon: Clock, title: "Wake in Theta", desc: "Theta Clock gently wakes you, keeping your brain receptive." },
-  { icon: Sparkles, title: "Transform Daily", desc: "Consistent use rewires your subconscious over time." },
-];
+{ icon: Moon, title: "Set Your Alarm", desc: "Choose your wake time like any alarm clock." },
+{ icon: Volume2, title: "Pick Affirmations", desc: "Select from categories or create your own." },
+{ icon: Clock, title: "Wake in Theta", desc: "Theta Clock gently wakes you, keeping your brain receptive." },
+{ icon: Sparkles, title: "Transform Daily", desc: "Consistent use rewires your subconscious over time." }];
 
-const HowItWorksSection = () => (
-  <section className="relative gradient-blue">
+
+const HowItWorksSection = () =>
+<section className="relative gradient-blue">
     <div className="pt-16 md:pt-24 pb-8">
       <div className="container mx-auto px-6">
         <AnimatedSection>
@@ -23,20 +23,20 @@ const HowItWorksSection = () => (
         </AnimatedSection>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-          {steps.map((step, i) => (
-            <AnimatedSection key={i} delay={i * 0.1}>
+          {steps.map((step, i) =>
+        <AnimatedSection key={i} delay={i * 0.1}>
               <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20 h-full">
                 <step.icon className="w-8 h-8 text-golden-yellow mb-4" />
                 <h3 className="text-lg text-primary-foreground font-semibold mb-2">{step.title}</h3>
                 <p className="text-primary-foreground/80 text-sm leading-relaxed">{step.desc}</p>
               </div>
             </AnimatedSection>
-          ))}
+        )}
         </div>
       </div>
     </div>
     <WaveDivider fillColor="hsl(var(--background))" />
-  </section>
-);
+  </section>;
+
 
 export default HowItWorksSection;
