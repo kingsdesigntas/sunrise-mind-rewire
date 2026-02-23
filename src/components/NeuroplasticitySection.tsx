@@ -24,7 +24,7 @@ const steps = [
 ];
 
 const NeuroplasticitySection = () => (
-  <section className="relative bg-background py-16 md:py-24">
+  <section className="relative bg-background pt-16 md:pt-24 pb-4">
     <div className="container mx-auto px-6">
       <AnimatedSection>
         <h2 className="text-3xl md:text-5xl text-foreground text-center mb-4">

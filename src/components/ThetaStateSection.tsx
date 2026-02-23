@@ -3,8 +3,8 @@ import thetaSleep from "@/assets/theta-sleep.jpg";
 import WaveDivider from "./WaveDivider";
 
 const ThetaStateSection = () => (
-  <section id="what-is-theta" className="relative">
-    <div className="gradient-morning-haze py-16 md:py-24">
+  <section id="what-is-theta" className="relative bg-soft-yellow">
+    <div className="gradient-morning-haze pt-16 md:pt-24 pb-8">
       <div className="container mx-auto px-6">
         <AnimatedSection>
           <h2 className="text-3xl md:text-5xl text-foreground text-center mb-4">
