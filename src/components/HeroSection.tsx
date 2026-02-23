@@ -10,7 +10,7 @@ const HeroSection = () =>
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <img src={logo} alt="Theta Clock" className="h-10 md:h-12" />
         <a
-        href="#early-access"
+        href="#pricing"
         className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-foreground text-card font-medium text-sm tracking-wide hover:opacity-90 transition-opacity">
 
           <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -41,7 +41,7 @@ const HeroSection = () =>
               </p>
               <div className="flex flex-wrap gap-4">
                 <motion.a
-                href="#early-access"
+                href="#pricing"
                 whileHover={{ y: -2, boxShadow: "var(--gradient-cta-glow)" }}
                 transition={{ duration: 0.25 }}
                 className="inline-flex items-center px-8 py-4 rounded-full bg-brand-orange font-medium text-foreground text-lg tracking-wide hover:bg-golden-yellow transition-colors">
@@ -74,7 +74,7 @@ const HeroSection = () =>
 
               </div>
               <motion.a
-              href="#early-access"
+              href="#pricing"
               whileHover={{ y: -2, boxShadow: "0 8px 24px rgba(255,164,0,0.4)" }}
               transition={{ duration: 0.25 }}
               className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-orange font-medium text-foreground text-base tracking-wide hover:bg-golden-yellow transition-colors bg-stone-50">
