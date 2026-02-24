@@ -24,7 +24,7 @@ const EarlyAccessSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <AnimatedSection>
           <h2 className="text-3xl md:text-5xl text-primary-foreground mb-4 text-center">
-            Early Beta Pricing
+            Early Bird Pricing
           </h2>
           <p className="text-primary-foreground/70 max-w-lg mx-auto mb-12 text-lg text-center">Get lifetime access — completely free during our beta launch.
 This offer will close after the first 100 users for a testing phase.
