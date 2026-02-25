@@ -10,7 +10,7 @@ const steps = [
 
 
 const HowItWorksSection = () =>
-<section className="relative gradient-blue">
+<section id="how-it-works" className="relative gradient-blue">
     <div className="pt-16 py-0 pb-[32px] md:pt-0">
       <div className="container mx-auto px-6">
         <AnimatedSection>
