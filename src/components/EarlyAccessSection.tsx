@@ -98,8 +98,8 @@ This offer will close after the first 100 users for a testing phase.
         </AnimatedSection>
 
         <AnimatedSection delay={0.3}>
-          <p className="mt-10 text-center text-primary-foreground/50 text-sm">
-            We will email you to complete our feedback survey. Coming soon to Android.
+          <p className="mt-10 text-center text-primary-foreground/50 text-sm">We will email you to complete our feedback survey. 
+
           </p>
         </AnimatedSection>
       </div>
