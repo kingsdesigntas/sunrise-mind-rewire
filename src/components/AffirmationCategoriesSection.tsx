@@ -12,7 +12,7 @@ const categories = [
 
 
 const AffirmationCategoriesSection = () =>
-<section className="relative bg-background pt-16 md:pt-24 pb-4 py-0">
+<section id="categories" className="relative bg-background pt-16 md:pt-24 pb-4 py-0">
     <div className="container mx-auto px-6">
       <AnimatedSection>
         <h2 className="text-3xl md:text-5xl text-foreground text-center mb-4">
