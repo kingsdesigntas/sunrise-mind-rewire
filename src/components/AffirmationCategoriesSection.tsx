@@ -1,8 +1,11 @@
-import { Heart, Shield, TrendingUp, Smile, Star, Leaf } from "lucide-react";
+import { Heart, Shield, TrendingUp, Smile, Star, Leaf, Zap, Ban, Unlock } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import WaveDivider from "./WaveDivider";
 
 const categories = [
+  { icon: Ban, title: "Overcome Self-Limiting Beliefs", sample: '"I release the stories that hold me back."' },
+  { icon: Zap, title: "Break Your Bad Habits", sample: '"I choose actions that serve my highest self."' },
+  { icon: Unlock, title: "Unlock Your Potential", sample: '"I am capable of achieving anything I set my mind to."' },
   { icon: Heart, title: "Self-Love", sample: '"I am worthy of love and belonging."' },
   { icon: Shield, title: "Confidence", sample: '"I trust myself to handle whatever comes."' },
   { icon: TrendingUp, title: "Abundance", sample: '"Opportunities flow to me effortlessly."' },
