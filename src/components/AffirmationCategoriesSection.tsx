@@ -26,8 +26,8 @@ const AffirmationCategoriesSection = () => (
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
         {categories.map((cat, i) => (
-          <AnimatedSection key={i} delay={i * 0.08}>
-            <div className="bg-soft-pink/30 rounded-2xl p-6 hover:shadow-md transition-shadow duration-250">
+          <AnimatedSection key={i} delay={i * 0.08} className="h-full">
+            <div className="bg-soft-pink/30 rounded-2xl p-6 hover:shadow-md transition-shadow duration-250 h-full">
               <cat.icon className="w-8 h-8 text-brand-pink mb-4" />
               <h3 className="text-lg text-foreground font-semibold mb-2">{cat.title}</h3>
               <p className="text-muted-foreground text-sm italic">{cat.sample}</p>
