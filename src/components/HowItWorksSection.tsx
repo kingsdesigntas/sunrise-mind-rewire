@@ -4,7 +4,7 @@ import WaveDivider from "./WaveDivider";
 
 const steps = [
 { icon: Moon, title: "Set Your Alarm", desc: "Choose your wake time like any alarm clock." },
-{ icon: Volume2, title: "Pick Affirmations", desc: "Select from categories or create your own." },
+{ icon: Volume2, title: "Record Your Affirmations", desc: "Select from categories or create your own." },
 { icon: Clock, title: "Wake in Theta", desc: "Theta Clock gently wakes you, keeping your brain receptive." },
 { icon: Sparkles, title: "Transform Daily", desc: "Consistent use rewires your subconscious over time." }];
 
