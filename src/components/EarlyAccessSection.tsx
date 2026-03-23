@@ -15,6 +15,17 @@ const EarlyAccessSection = () => {
   };
 
   return (
+
+
+    <!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2182870');
+</script>
+<!-- End MailerLite Universal -->
     <section id="pricing" className="relative bg-deep-blue py-20 md:py-28">
       {/* Subtle texture overlay */}
       <div className="absolute inset-0 opacity-[0.04]" style={{
@@ -61,6 +72,9 @@ This offer will close after the first 100 users for a testing phase.
         {/* Email Capture */}
         <AnimatedSection delay={0.2}>
           <div className="max-w-md mx-auto text-center">
+          <div class="ml-embedded" data-form="8G6fR2"></div>
+
+            
             <p className="text-primary-foreground/80 mb-6 text-base">
               Enter your email to receive your free download link.
             </p>
