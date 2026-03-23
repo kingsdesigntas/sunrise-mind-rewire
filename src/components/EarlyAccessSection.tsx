@@ -1,18 +1,19 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect } from "react";
 import AnimatedSection from "./AnimatedSection";
 
 const EarlyAccessSection = () => {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setSubmitted(true);
-      setEmail("");
-    }
-  };
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://assets.mailerlite.com/js/universal.js";
+    script.async = true;
+    script.onload = () => {
+      (window as any).ml?.("account", "2182870");
+    };
+    document.head.appendChild(script);
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
 
   return (
     <section id="pricing" className="relative bg-deep-blue py-20 md:py-28">
@@ -58,56 +59,22 @@ This offer will close after the first 100 users for a testing phase.
           </div>
         </AnimatedSection>
 
-        {/* Email Capture */}
+        {/* MailerLite Email Capture */}
         <AnimatedSection delay={0.2}>
           <div className="max-w-md mx-auto text-center">
-          <div className="ml-embedded" data-form="8G6fR2"></div>
-
-            
             <p className="text-primary-foreground/80 mb-6 text-base">
               Enter your email to receive your free download link.
             </p>
-
-            {submitted ?
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              className="bg-primary-foreground/10 rounded-2xl p-8 border border-primary-foreground/20">
-
-                <p className="text-primary-foreground text-xl font-semibold mb-2">You're in! 🌅</p>
-                <p className="text-primary-foreground/70">Check your inbox for your free download link.</p>
-              </motion.div> :
-
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
-                <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                required
-                className="flex-1 px-6 py-4 rounded-full bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-golden-yellow/50 text-base" />
-
-                <motion.button
-                type="submit"
-                whileHover={{ y: -2, boxShadow: "0 8px 24px hsl(47 100% 50% / 0.3)" }}
-                transition={{ duration: 0.25 }}
-                className="px-8 py-4 rounded-full bg-golden-yellow text-foreground font-medium text-lg tracking-wide hover:brightness-110 transition-all">
-
-                  Get Free Access
-                </motion.button>
-              </form>
-            }
+            <div className="ml-embedded" data-form="8G6fR2"></div>
           </div>
         </AnimatedSection>
 
         <AnimatedSection delay={0.3}>
-          <p className="mt-10 text-center text-primary-foreground/50 text-sm">We will email you to complete our feedback survey. 
-
-          </p>
+          <p className="mt-10 text-center text-primary-foreground/50 text-sm">We will email you to complete our feedback survey.</p>
         </AnimatedSection>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default EarlyAccessSection;
