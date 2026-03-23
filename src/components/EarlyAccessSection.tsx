@@ -1,19 +1,19 @@
+import { useEffect } from "react";
 import AnimatedSection from "./AnimatedSection";
 
 const EarlyAccessSection = () => {
+  useEffect(() => {
+    const w = window as any;
+    w.ml = w.ml || function () { (w.ml.q = w.ml.q || []).push(arguments); };
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://assets.mailerlite.com/js/universal.js";
+    document.head.appendChild(script);
+    w.ml("account", "2182870");
+    return () => { script.remove(); };
+  }, []);
 
   return (
-
-
-    <!-- MailerLite Universal -->
-<script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2182870');
-</script>
-<!-- End MailerLite Universal -->
     <section id="pricing" className="relative bg-deep-blue py-20 md:py-28">
       {/* Subtle texture overlay */}
       <div className="absolute inset-0 opacity-[0.04]" style={{
