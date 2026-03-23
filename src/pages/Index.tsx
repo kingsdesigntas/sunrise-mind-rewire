@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import HeroSection from "@/components/HeroSection";
 import ThetaStateSection from "@/components/ThetaStateSection";
 import NeuroplasticitySection from "@/components/NeuroplasticitySection";
@@ -8,6 +9,11 @@ import EarlyAccessSection from "@/components/EarlyAccessSection";
 
 const Index = () => (
   <main className="overflow-hidden">
+    <SEOHead
+      title="Theta Clock — Rewire Your Mind While You Wake"
+      description="Theta Clock delivers affirmations during your brain's most receptive theta state. Rewire your subconscious mind as you wake. Try it free."
+      path="/"
+    />
     <HeroSection />
     <ThetaStateSection />
     <NeuroplasticitySection />

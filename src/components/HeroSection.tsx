@@ -74,9 +74,11 @@ const HeroSection = () =>
 
               <div className="relative w-[260px] md:w-[300px]">
                 <img
-
-                alt="Theta Clock App"
-                className="w-full rounded-[2rem] shadow-2xl" src="/lovable-uploads/9423868e-ea59-4a71-9d3c-55413282726b.jpg" />
+                src="/lovable-uploads/9423868e-ea59-4a71-9d3c-55413282726b.jpg"
+                alt="Theta Clock app screenshot showing affirmation alarm interface"
+                className="w-full rounded-[2rem] shadow-2xl"
+                width={300}
+                height={600} />
 
               </div>
               <motion.a
