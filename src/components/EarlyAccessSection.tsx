@@ -61,7 +61,7 @@ This offer will close after the first 100 users for a testing phase.
         {/* Email Capture */}
         <AnimatedSection delay={0.2}>
           <div className="max-w-md mx-auto text-center">
-          <div class="ml-embedded" data-form="8G6fR2"></div>
+          <div className="ml-embedded" data-form="8G6fR2"></div>
 
             
             <p className="text-primary-foreground/80 mb-6 text-base">
