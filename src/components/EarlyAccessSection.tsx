@@ -1,19 +1,6 @@
-import { useEffect } from "react";
 import AnimatedSection from "./AnimatedSection";
 
 const EarlyAccessSection = () => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://assets.mailerlite.com/js/universal.js";
-    script.async = true;
-    script.onload = () => {
-      (window as any).ml?.("account", "2182870");
-    };
-    document.head.appendChild(script);
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
 
   return (
     <section id="pricing" className="relative bg-deep-blue py-20 md:py-28">
