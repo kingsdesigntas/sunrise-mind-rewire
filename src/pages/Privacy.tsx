@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 
 const Privacy = () => (
   <main className="min-h-screen bg-background text-foreground">
+    <SEOHead
+      title="Privacy Policy — Theta Clock"
+      description="Read Theta Clock's privacy policy. Learn how we handle your data, audio recordings, and permissions in our affirmation alarm app."
+      path="/privacy"
+    />
     <div className="max-w-3xl mx-auto px-6 py-16">
       <Link to="/" className="text-primary hover:underline text-sm mb-8 inline-block">
         ← Back to Home

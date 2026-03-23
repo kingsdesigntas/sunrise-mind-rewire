@@ -20,9 +20,11 @@ const ThetaStateSection = () =>
             <div className="rounded-2xl overflow-hidden shadow-lg">
               <img
               src={thetaSleep}
-              alt="Person peacefully sleeping with theta brainwaves visualized"
+              alt="Person sleeping peacefully during theta brainwave state used for affirmations"
               className="w-full h-auto object-cover"
-              loading="lazy" />
+              loading="lazy"
+              width={600}
+              height={400} />
 
             </div>
           </AnimatedSection>
