@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.thetaclock.com/sitemap.xml
+Sitemap: https://theta-rise-landing.lovable.app/sitemap.xml
