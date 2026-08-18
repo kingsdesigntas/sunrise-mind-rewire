@@ -52,7 +52,7 @@ const HeroSection = () =>
                 transition={{ duration: 0.25 }}
                 className="inline-flex items-center px-8 py-4 rounded-full bg-brand-orange font-medium text-foreground text-lg tracking-wide hover:bg-golden-yellow transition-colors">
 
-                  Get Free Early Access
+                  Start 14-Day Free Trial
                 </motion.a>
                 <motion.a
                 href="#what-is-theta"
