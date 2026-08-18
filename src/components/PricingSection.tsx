@@ -73,11 +73,15 @@ const PricingSection = () => {
                     : "border border-primary-foreground/15 bg-primary-foreground/5"
                 }`}
               >
-                {plan.featured && (
-                  <div className="absolute top-3 right-3 bg-golden-yellow text-foreground text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-                    Best value
-                  </div>
-                )}
+                <div
+                  className={`absolute top-3 right-3 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide ${
+                    plan.featured
+                      ? "bg-golden-yellow text-foreground"
+                      : "bg-primary-foreground/20 text-primary-foreground"
+                  }`}
+                >
+                  {plan.featured ? "Best value" : plan.note}
+                </div>
                 <p
                   className={`text-sm font-medium uppercase tracking-wider mb-4 ${
                     plan.featured ? "text-golden-yellow" : "text-primary-foreground/60"
@@ -87,15 +91,6 @@ const PricingSection = () => {
                 </p>
                 <span className="text-5xl font-extrabold text-primary-foreground">{plan.price}</span>
                 <p className="text-primary-foreground/60 text-sm mt-3">{plan.period}</p>
-                <p
-                  className={`text-xs mt-2 ${
-                    plan.featured
-                      ? "text-golden-yellow font-semibold"
-                      : "text-primary-foreground/50"
-                  }`}
-                >
-                  {plan.note}
-                </p>
               </div>
             ))}
           </div>
