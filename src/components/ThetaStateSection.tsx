@@ -46,13 +46,7 @@ const ThetaStateSection = () =>
         </div>
       </div>
     </div>
-    <WaveDivider
-      gradient={{
-        id: "morning-haze-to-bg",
-        from: "hsl(30 65% 78%)",
-        to: "hsl(var(--background))",
-      }}
-    />
+    <WaveDivider fillColor="hsl(30 65% 78%)" />
   </section>;
 
 
