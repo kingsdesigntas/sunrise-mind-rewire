@@ -14,14 +14,14 @@ const plans = [
     price: "$50",
     period: "per year",
     note: "Save over 15%",
-    featured: true,
+    featured: false,
   },
   {
     name: "Lifetime",
     price: "$40",
     period: "one-time",
     note: "Available for the first 6 months only",
-    featured: false,
+    featured: true,
   },
 ];
 
