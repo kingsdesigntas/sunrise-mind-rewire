@@ -83,7 +83,7 @@ const PricingSection = () => {
                   {plan.featured ? "Best value" : plan.note}
                 </div>
                 <p
-                  className={`text-sm font-medium uppercase tracking-wider mb-4 ${
+                  className={`text-xl font-bold uppercase tracking-wider mt-8 mb-4 ${
                     plan.featured ? "text-golden-yellow" : "text-primary-foreground/60"
                   }`}
                 >
