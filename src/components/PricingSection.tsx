@@ -87,7 +87,15 @@ const PricingSection = () => {
                 </p>
                 <span className="text-5xl font-extrabold text-primary-foreground">{plan.price}</span>
                 <p className="text-primary-foreground/60 text-sm mt-3">{plan.period}</p>
-                <p className="text-primary-foreground/50 text-xs mt-2">{plan.note}</p>
+                <p
+                  className={`text-xs mt-2 ${
+                    plan.featured
+                      ? "text-golden-yellow font-semibold"
+                      : "text-primary-foreground/50"
+                  }`}
+                >
+                  {plan.note}
+                </p>
               </div>
             ))}
           </div>
