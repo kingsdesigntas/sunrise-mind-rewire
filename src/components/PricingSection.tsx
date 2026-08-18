@@ -14,14 +14,14 @@ const plans = [
     price: "$50",
     period: "per year",
     note: "Save over 15%",
-    featured: true,
+    featured: false,
   },
   {
     name: "Lifetime",
     price: "$40",
     period: "one-time",
     note: "Available for the first 6 months only",
-    featured: false,
+    featured: true,
   },
 ];
 
@@ -87,7 +87,15 @@ const PricingSection = () => {
                 </p>
                 <span className="text-5xl font-extrabold text-primary-foreground">{plan.price}</span>
                 <p className="text-primary-foreground/60 text-sm mt-3">{plan.period}</p>
-                <p className="text-primary-foreground/50 text-xs mt-2">{plan.note}</p>
+                <p
+                  className={`text-xs mt-2 ${
+                    plan.featured
+                      ? "text-golden-yellow font-semibold"
+                      : "text-primary-foreground/50"
+                  }`}
+                >
+                  {plan.note}
+                </p>
               </div>
             ))}
           </div>
