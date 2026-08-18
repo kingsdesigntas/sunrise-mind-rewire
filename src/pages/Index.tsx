@@ -5,7 +5,7 @@ import ThetaStateSection from "@/components/ThetaStateSection";
 import NeuroplasticitySection from "@/components/NeuroplasticitySection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import AffirmationCategoriesSection from "@/components/AffirmationCategoriesSection";
-import EarlyAccessSection from "@/components/EarlyAccessSection";
+import PricingSection from "@/components/PricingSection";
 
 const Index = () => (
   <main className="overflow-hidden">
@@ -19,7 +19,7 @@ const Index = () => (
     <NeuroplasticitySection />
     <HowItWorksSection />
     <AffirmationCategoriesSection />
-    <EarlyAccessSection />
+    <PricingSection />
     <footer className="bg-deep-blue py-6 text-center">
       <p className="text-primary-foreground/40 text-sm">
         © 2026 Theta Clock. All rights reserved.
